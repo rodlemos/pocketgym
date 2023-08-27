@@ -1,12 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import Home from "./src/screens/Home";
-import { Login } from "./src/screens/Login";
+import { ThemeProvider } from "styled-components/native";
+import { Routes } from "./src/routes";
+import { theme } from "./src/theme";
 
 export default function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <StatusBar style="auto" />
-      <Home />
-    </>
+      <Routes />
+    </ThemeProvider>
   );
 }
